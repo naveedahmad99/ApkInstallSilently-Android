@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         boolean isRoot = new File("/system/bin/su").exists() || new File("/system/xbin/su").exists();
         if (!isRoot) {
-            Toast.makeText(this, "手机没有Root", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "The phone does not have a root", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -86,9 +86,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void run() {
                         if (result) {
-                            Toast.makeText(MainActivity.this, "安装成功", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Successful installation", Toast.LENGTH_SHORT).show();
                         }else {
-                            Toast.makeText(MainActivity.this, "安装失败", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Installation failed", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -101,9 +101,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intent.setType("*/*");
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         try {
-            startActivityForResult(Intent.createChooser(intent, "选择一个APK"), FILE_SELECT);
+            startActivityForResult(Intent.createChooser(intent, "Select an APK"), FILE_SELECT);
         }catch (ActivityNotFoundException e) {
-            Toast.makeText(this, "找不到文件浏览器", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "File browser not found", Toast.LENGTH_SHORT).show();
         }
     }
     @Override
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tvTitle.setText(path);
             } catch (URISyntaxException e) {
                 e.printStackTrace();
-                Toast.makeText(this, "发生错误", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "An error occurred", Toast.LENGTH_SHORT).show();
             }
         }
         super.onActivityResult(requestCode, resultCode, data);

@@ -48,9 +48,9 @@ public class SilentInstallAccessibilityService extends AccessibilityService {
                 if ("android.widget.Button".equals(nodeInfo.getClassName())) {
                     String nodeContent = nodeInfo.getText().toString();
                     Log.d("TAG", "content is " + nodeContent);
-                    if ("安装".equals(nodeContent)
-                            || "完成".equals(nodeContent)
-                            || "确定".equals(nodeContent)) {
+                    if ("installation".equals(nodeContent)
+                            || "carry out".equals(nodeContent)
+                            || "determine".equals(nodeContent)) {
                         nodeInfo.performAction(AccessibilityNodeInfo.ACTION_CLICK);
                         return true;
                     }
