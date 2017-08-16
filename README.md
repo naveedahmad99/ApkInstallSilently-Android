@@ -1,7 +1,7 @@
 # android-silent-installer
 Android application silent install while device is root, and auto install with accessibility-service if not.
 
-参考资料：
+#Reference material：
 
 1. [http://developer.android.com/intl/zh-cn/guide/topics/ui/accessibility/services.html](http://developer.android.com/intl/zh-cn/guide/topics/ui/accessibility/services.html)
 2. [http://blog.csdn.net/guolin_blog/article/details/47803149](http://blog.csdn.net/guolin_blog/article/details/47803149)
